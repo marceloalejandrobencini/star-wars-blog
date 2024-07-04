@@ -25,11 +25,11 @@ const Home = () => {
 
     return (
         <div className="container">
-            <h1>People</h1>
+            <h1>Vehicles</h1>
             <div className="row">
-                {people.map(person => (
-                    <div key={person.uid} className="col-md-4">
-                        <Card item={person} type="characters" />
+                {vehicles.map(vehicle => (
+                    <div key={vehicle.uid} className="col-md-4">
+                        <Card item={vehicle} type="vehicles" />
                     </div>
                 ))}
             </div>
@@ -41,14 +41,15 @@ const Home = () => {
                     </div>
                 ))}
             </div>
-            <h1>Vehicles</h1>
+            <h1>People</h1>
             <div className="row">
-                {vehicles.map(vehicle => (
-                    <div key={vehicle.uid} className="col-md-4">
-                        <Card item={vehicle} type="vehicles" />
+                {people.map(person => (
+                    <div key={person.uid} className="col-md-4">
+                        <Card item={person} type="characters" />
                     </div>
                 ))}
             </div>
+            
         </div>
     );
 };
